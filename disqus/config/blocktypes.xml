@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<concrete5-cif version="1.0">
+    <blocktypes>
+        <blocktype handle="disqus" package="disqus"/>
+    </blocktypes>
+</concrete5-cif>
