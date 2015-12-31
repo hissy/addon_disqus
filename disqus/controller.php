@@ -9,7 +9,7 @@ class Controller extends Package
 {
     protected $pkgHandle = 'disqus';
     protected $appVersionRequired = '5.7.5';
-    protected $pkgVersion = '0.1';
+    protected $pkgVersion = '0.9';
 
     public function getPackageDescription()
     {
