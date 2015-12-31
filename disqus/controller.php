@@ -1,31 +1,33 @@
 <?php
-
 namespace Concrete\Package\Disqus;
 
-use Concrete\Core\Backup\ContentImporter;
 use Concrete\Core\Package\Package;
+use BlockType;
+use BlockTypeSet;
 
 class Controller extends Package
 {
     protected $pkgHandle = 'disqus';
-    protected $appVersionRequired = '5.7.5.3';
+    protected $appVersionRequired = '5.7.5';
     protected $pkgVersion = '0.1';
 
     public function getPackageDescription()
     {
-        return t("Adds disqus comment system to your site.");
+        return t("Adds Disqus comment system to your site.");
     }
 
     public function getPackageName()
     {
         return t("Disqus");
     }
-    
+
     public function install()
     {
         $pkg = parent::install();
-        
-        $ci = new ContentImporter();
-        $ci->importContentFile($pkg->getPackagePath() . '/config/blocktypes.xml');
+        $bt = BlockType::installBlockType('disqus', $pkg);
+        $btSet = BlockTypeSet::getByHandle('social');
+        if (is_object($bt) && is_object($btSet)) {
+            $btSet->addBlockType($bt);
+        }
     }
 }
