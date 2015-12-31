@@ -1,3 +1,4 @@
+<?php defined('C5_EXECUTE') or die("Access Denied."); ?>
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
