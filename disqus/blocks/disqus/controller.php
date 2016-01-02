@@ -19,12 +19,12 @@ class Controller extends BlockController
 
     public function getBlockTypeDescription()
     {
-        return t('Add Disqus comment thred on the page.');
+        return t('Add Disqus comment thread on the page.');
     }
 
     public function getBlockTypeName()
     {
-        return t('Disqus Comment');
+        return t('Comment with Disqus');
     }
 
     public function view()

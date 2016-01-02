@@ -18,7 +18,7 @@ class Controller extends Package
 
     public function getPackageName()
     {
-        return t("Disqus");
+        return t("Comment with Disqus");
     }
 
     public function install()
